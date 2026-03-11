@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-03-09 12:35-0500\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: es\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/app/[lang]/hellotesting/page.tsx:24
+#: src/app/[lang]/page.tsx:24
+msgid "Active locale:"
+msgstr "Idioma activo:"
+
+#: src/components/AdditionalTextToggle.tsx:12
+msgid "Additional text:"
+msgstr "Texto adicional:"
+
+#: src/app/[lang]/error.tsx:18
+msgid "An unexpected error occurred."
+msgstr "Ocurrió un error inesperado."
+
+#: src/app/[lang]/hellotesting/page.tsx:31
+#: src/app/[lang]/not-found.tsx:18
+msgid "Back to Home"
+msgstr "Volver al Inicio"
+
+#: src/app/[lang]/page.tsx:31
+msgid "Go to Hello Testing"
+msgstr "Ir a Hola Testing"
+
+#: src/app/[lang]/hellotesting/page.tsx:16
+msgid "Hello Testing"
+msgstr "Hola Testing"
+
+#: src/app/[lang]/page.tsx:16
+msgid "Hello World"
+msgstr "Hola Mundo"
+
+#: src/app/[lang]/not-found.tsx:12
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: src/app/[lang]/error.tsx:15
+msgid "Something went wrong"
+msgstr "Algo salió mal"
+
+#: src/components/AdditionalTextToggle.tsx:30
+msgid "This is additional text."
+msgstr "Este es texto adicional."
+
+#: src/app/[lang]/hellotesting/page.tsx:19
+#: src/app/[lang]/page.tsx:19
+msgid "This text is translated using LinguiJS in the Next.js App Router."
+msgstr "Este texto está traducido usando LinguiJS en el Next.js App Router."
+
+#: src/app/[lang]/error.tsx:24
+msgid "Try again"
+msgstr "Intentar de nuevo"

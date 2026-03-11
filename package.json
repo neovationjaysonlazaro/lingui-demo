@@ -1,20 +1,32 @@
 {
-  "name": "lingui-demo-temp",
+  "name": "lingui-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lingui:extract": "lingui extract",
+    "lingui:compile": "lingui compile --typescript",
+    "lingui:verify": "lingui extract --clean && lingui compile --typescript --strict"
   },
   "dependencies": {
+    "@lingui/core": "^5.9.2",
+    "@lingui/macro": "^5.9.2",
+    "@lingui/react": "^5.9.2",
+    "negotiator": "^1.0.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@lingui/cli": "^5.9.2",
+    "@lingui/loader": "^5.9.2",
+    "@lingui/swc-plugin": "^5.11.0",
     "@tailwindcss/postcss": "^4",
+    "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
