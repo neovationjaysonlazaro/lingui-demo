@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2026-03-09 12:35-0500\n"
+"POT-Creation-Date: 2026-03-12 08:30-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: es\n"
+"Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -16,50 +16,50 @@ msgstr ""
 #: src/app/[lang]/hellotesting/page.tsx:27
 #: src/app/[lang]/page.tsx:26
 msgid "Active locale:"
-msgstr "Idioma activo:"
+msgstr "Langue active :"
 
 #: src/components/AdditionalTextToggle.tsx:12
 msgid "Additional text:"
-msgstr "Texto adicional:"
+msgstr "Texte supplémentaire :"
 
 #: src/app/[lang]/error.tsx:18
 msgid "An unexpected error occurred."
-msgstr "Ocurrió un error inesperado."
+msgstr "Une erreur inattendue s'est produite."
 
 #: src/app/[lang]/hellotesting/page.tsx:35
 #: src/app/[lang]/not-found.tsx:20
 msgid "Back to Home"
-msgstr "Volver al Inicio"
+msgstr "Retour à l'accueil"
 
 #: src/app/[lang]/page.tsx:34
 msgid "Go to Hello Testing"
-msgstr "Ir a Hola Testing"
+msgstr "Aller à Hello Testing"
 
 #: src/app/[lang]/hellotesting/page.tsx:19
 msgid "Hello Testing"
-msgstr "Hola Testing"
+msgstr "Bonjour Testing"
 
 #: src/app/[lang]/page.tsx:18
 msgid "Hello World"
-msgstr "Hola Mundo"
+msgstr "Bonjour le monde"
 
 #: src/app/[lang]/not-found.tsx:14
 msgid "Page not found"
-msgstr "Página no encontrada"
+msgstr "Page introuvable"
 
 #: src/app/[lang]/error.tsx:15
 msgid "Something went wrong"
-msgstr "Algo salió mal"
+msgstr "Une erreur est survenue"
 
 #: src/components/AdditionalTextToggle.tsx:31
 msgid "This is additional text."
-msgstr "Este es texto adicional."
+msgstr "Ceci est du texte supplémentaire."
 
 #: src/app/[lang]/hellotesting/page.tsx:22
 #: src/app/[lang]/page.tsx:21
 msgid "This text is translated using LinguiJS in the Next.js App Router."
-msgstr "Este texto está traducido usando LinguiJS en el Next.js App Router."
+msgstr "Ce texte est traduit avec LinguiJS dans le Next.js App Router."
 
 #: src/app/[lang]/error.tsx:24
 msgid "Try again"
-msgstr "Intentar de nuevo"
+msgstr "Réessayer"

@@ -5,6 +5,7 @@ import linguiConfig from "../../lingui.config";
 
 const LOCALE_LABELS: Record<string, string> = {
   en: "English",
+  fr: "Français",
   es: "Español",
 };
 

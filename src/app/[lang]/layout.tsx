@@ -3,8 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { setI18n } from "@lingui/react/server";
 import { getI18nInstance, getAllLocales } from "@/lib/i18n";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
+import linguiConfig from "../../../lingui.config";
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return linguiConfig.locales.map((lang) => ({ lang }));
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

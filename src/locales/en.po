@@ -13,8 +13,8 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/[lang]/hellotesting/page.tsx:24
-#: src/app/[lang]/page.tsx:24
+#: src/app/[lang]/hellotesting/page.tsx:27
+#: src/app/[lang]/page.tsx:26
 msgid "Active locale:"
 msgstr "Active locale:"
 
@@ -26,24 +26,24 @@ msgstr "Additional text:"
 msgid "An unexpected error occurred."
 msgstr "An unexpected error occurred."
 
-#: src/app/[lang]/hellotesting/page.tsx:31
-#: src/app/[lang]/not-found.tsx:18
+#: src/app/[lang]/hellotesting/page.tsx:35
+#: src/app/[lang]/not-found.tsx:20
 msgid "Back to Home"
 msgstr "Back to Home"
 
-#: src/app/[lang]/page.tsx:31
+#: src/app/[lang]/page.tsx:34
 msgid "Go to Hello Testing"
 msgstr "Go to Hello Testing"
 
-#: src/app/[lang]/hellotesting/page.tsx:16
+#: src/app/[lang]/hellotesting/page.tsx:19
 msgid "Hello Testing"
 msgstr "Hello Testing"
 
-#: src/app/[lang]/page.tsx:16
+#: src/app/[lang]/page.tsx:18
 msgid "Hello World"
 msgstr "Hello World"
 
-#: src/app/[lang]/not-found.tsx:12
+#: src/app/[lang]/not-found.tsx:14
 msgid "Page not found"
 msgstr "Page not found"
 
@@ -51,12 +51,12 @@ msgstr "Page not found"
 msgid "Something went wrong"
 msgstr "Something went wrong"
 
-#: src/components/AdditionalTextToggle.tsx:30
+#: src/components/AdditionalTextToggle.tsx:31
 msgid "This is additional text."
 msgstr "This is additional text."
 
-#: src/app/[lang]/hellotesting/page.tsx:19
-#: src/app/[lang]/page.tsx:19
+#: src/app/[lang]/hellotesting/page.tsx:22
+#: src/app/[lang]/page.tsx:21
 msgid "This text is translated using LinguiJS in the Next.js App Router."
 msgstr "This text is translated using LinguiJS in the Next.js App Router."
 

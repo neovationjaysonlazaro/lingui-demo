@@ -7,13 +7,13 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
 const { locales } = linguiConfig;
 
 // Lingui requires URL-based locale routing: every page lives under /[lang]/...
-// This middleware ensures every request reaches a valid locale-prefixed URL.
+// This proxy ensures every request reaches a valid locale-prefixed URL.
 //
 // Flow:
 //   1. If the URL already has a valid locale prefix → pass through, persist cookie
 //   2. If the URL has no locale or an unsupported one → resolve preferred locale
 //      (cookie → Accept-Language → fallback), redirect to /{locale}/...
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the URL already starts with a supported locale prefix
@@ -42,8 +42,8 @@ export function middleware(request: NextRequest) {
   }
 
   // No valid locale prefix found — need to redirect.
-  // Strip an unknown locale-like prefix (e.g. "/fr" or "/fr/about") so
-  // we don't end up with nested junk like "/en/fr/about".
+  // Strip an unknown locale-like prefix (e.g. "/de" or "/de/about") so
+  // we don't end up with nested junk like "/en/de/about".
   const segments = pathname.split("/");
   const maybeLocale = segments[1];
   const looksLikeLocale = /^[a-z]{2}(-[a-z]{2})?$/i.test(maybeLocale ?? "");
@@ -82,7 +82,7 @@ function getRequestLocale(request: NextRequest): string {
   return languages[0] || locales[0] || "en";
 }
 
-// Matcher excludes API routes, static assets, and images — middleware only
+// Matcher excludes API routes, static assets, and images — proxy only
 // runs for page navigations that need locale routing.
 export const config = {
   matcher: [

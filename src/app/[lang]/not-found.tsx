@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Trans } from "@lingui/react/macro";
+import { LocaleLink } from "@/components/LocaleLink";
 
 export default function NotFound() {
   return (
@@ -13,12 +13,12 @@ export default function NotFound() {
         <p className="text-lg text-zinc-600 dark:text-zinc-400">
           <Trans>Page not found</Trans>
         </p>
-        <Link
+        <LocaleLink
           href="/"
           className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
         >
           <Trans>Back to Home</Trans>
-        </Link>
+        </LocaleLink>
       </main>
     </div>
   );

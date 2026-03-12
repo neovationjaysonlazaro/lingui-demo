@@ -7,7 +7,7 @@ const config: LinguiConfig = {
   // All supported locales. Adding a new locale here is the first step;
   // you must then run `lingui extract` to create its .po file and
   // `lingui compile --typescript` to generate its compiled .ts catalog.
-  locales: ["en", "es"],
+  locales: ["en", "fr", "es"],
 
   // The source locale — msgid strings in <Trans> are written in this language.
   // `lingui extract` uses this to populate the source .po file automatically.

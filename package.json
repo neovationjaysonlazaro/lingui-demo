@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "lingui:extract": "lingui extract",
-    "lingui:compile": "lingui compile --typescript",
+    "lingui:compile": "lingui compile --typescript --strict",
     "lingui:verify": "lingui extract --clean && lingui compile --typescript --strict"
   },
   "dependencies": {

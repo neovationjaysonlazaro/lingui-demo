@@ -1,21 +1,16 @@
 import "server-only";
 
+import { cache } from "react";
 import { type I18n, type Messages, setupI18n } from "@lingui/core";
 import { setI18n } from "@lingui/react/server";
 import linguiConfig from "../../lingui.config";
 
 const { locales } = linguiConfig;
 
-// Two-layer cache: raw Messages objects and fully-constructed I18n instances.
-// After the first request for a locale, all subsequent requests reuse the
-// cached instance with zero allocation or re-parsing.
+// Module-level cache for raw Messages objects. These are immutable data loaded
+// from compiled catalogs — safe to share across requests and never stale.
 const catalogCache = new Map<string, Messages>();
-const instanceCache = new Map<string, I18n>();
 
-// Lazily loads a compiled catalog (.ts file) for the given locale via dynamic
-// import. Only the requested locale is imported — other locales stay unbundled.
-// The compiled catalogs use JSON.parse() internally, which V8 parses faster
-// than equivalent JS object literals.
 async function loadCatalog(locale: string): Promise<Messages> {
   if (catalogCache.has(locale)) return catalogCache.get(locale)!;
   const { messages } = await import(`../locales/${locale}.ts`);
@@ -27,20 +22,21 @@ export function getAllLocales(): string[] {
   return locales;
 }
 
-// Creates (or retrieves from cache) a fully-configured I18n instance for the
-// given locale. Validates the locale against the whitelist before any dynamic
-// import to prevent path injection.
+// React.cache scopes the I18n instance to the current server request.
+// Each request gets its own instance — no mutable state leaks between
+// concurrent requests. The catalog data underneath is still shared via
+// the module-level catalogCache (immutable, so safe to share).
+const getI18nInstanceCached = cache(async (locale: string): Promise<I18n> => {
+  const messages = await loadCatalog(locale);
+  return setupI18n({ locale, messages: { [locale]: messages } });
+});
+
 export async function getI18nInstance(locale: string): Promise<I18n> {
   if (!locales.includes(locale)) {
     console.warn(`Unsupported locale "${locale}", falling back to "en"`);
     locale = "en";
   }
-  if (instanceCache.has(locale)) return instanceCache.get(locale)!;
-
-  const messages = await loadCatalog(locale);
-  const i18n = setupI18n({ locale, messages: { [locale]: messages } });
-  instanceCache.set(locale, i18n);
-  return i18n;
+  return getI18nInstanceCached(locale);
 }
 
 // Convenience helper that combines getI18nInstance + setI18n into one call.
